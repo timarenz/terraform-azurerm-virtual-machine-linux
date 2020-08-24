@@ -47,12 +47,22 @@ variable "ssh_public_key" {
   type = string
 }
 
-variable "network_security_group_id" {
-  type    = string
-  default = null
-}
+# variable "network_security_group_id" {
+#   type    = string
+#   default = null
+# }
 
 variable "tags" {
   type    = map
+  default = null
+}
+
+variable "private_ip_address_allocation" {
+  type    = string
+  default = "Dynamic"
+}
+
+variable "private_ip_address" {
+  type    = string
   default = null
 }
